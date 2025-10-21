@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abdu salim — new Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{
+      background:#45b9b9;
+      color:hsl(53, 27%, 94%);
+      min-height:100vh;
+      padding:12px;
+    }
+    header{
+      background:hsl(0, 0%, 2%);
+      border-radius:14px;
+      padding:12px 16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .logo{font-weight:700;font-size:1.2rem}
+    nav ul{list-style:none;display:flex;gap:10px;}
+    nav a{color:#ffffff;text-decoration:none;font-weight:600;}
+    .menu{display:none;font-size:1.5rem;cursor:pointer;}
+    @media(max-width:600px){
+      nav ul{display:none;flex-direction:column;background:#1f665d;padding:10px;border-radius:10px;margin-top:8px;}
+      nav ul.show{display:flex;}
+      .menu{display:block;}
+    }
+
+    section{margin-top:20px;background:#162222;border-radius:14px;padding:16px;}
+    h1,h2,h3{color:#bbab1d;}
+    p{color:#1f918b;line-height:1.5;}
+img{
+   border-radius:50px;
+}
+    .btn{
+      background:#1f665d;
+      color:hsl(136, 66%, 6%);
+      border:none;
+      border-radius:10px;
+      padding:10px 14px;
+      margin-top:10px;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+    .tag{background:#2b3d3d;border-radius:999px;padding:6px 12px;font-size:0.9rem;}
+
+    .project{background:#814343;color:#051e2e;padding:12px;border-radius:10px;margin-top:10px;}
+    .contact form{display:flex;flex-direction:column;gap:8px;margin-top:10px;}
+    input,textarea{padding:8px;border-radius:8px;border:none;}
+    footer{text-align:center;color:#af4646;font-size:0.85rem;margin-top:20px;}
+  </style>
+</head>
+<body>
+<script src="index.js"></script>
+<header>
+  <div class="logo">Abdu salim • new Portfolio</div>
+  <div class="menu" id="menuBtn">☰</div>
+  <nav>
+    <ul id="navLinks">
+          
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+        
+          
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <h1>Hello, I’m Abdu <a href="https://www.chatgpt.com">👋</a></h1>
+  <p></p>
+  <button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+   <img src="b.jpeg"  height="200px" width="200px"alt="">
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">Python</span>
+    <span class="tag">PHP</span>
+  </div>
+      <img src="1.png" width="100px" height="100px" alt="">
+
+</section>
+ <a href="index1.html">@</a>
+
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Family Planner App</h3>
+    <p>A simple web app to manage family tasks, schedule, and rooms.</p>
+    <a href="https://github.com/">github</a> <br> 
+    <a href="https://www.whatsapp.com/">whatsapp</a> <br>
+    <a href="https://www.email.com/">Email</a> <br>
+    <a href="https://www.wearealight.org/">wearealight</a> <br>
+    <a href="https://www.google.com/">google</a> <br>
+  </div>
+  <div class="project">
+    <h3>Personal Portfolio</h3>
+    <p>A one-page responsive design that works great on mobile screens.</p>
+    <a href="https://www.figma.com/">figma</a><br>
+     <a href="https://www.canva.com/">canva</a><br>
+      <a href="https://www.linked.com/">linked</a><br>
+       <a href="https://www.youtube.com/">youtube</a><br>
+       <a href="https://www.w3schools.com/html/">MR Abdusalim /w3school coding & code.</a><br>
+
+   
+
+
+  </div>
+  <a href="index1.html">@</a>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="event.preventDefault();alert('Message sent!')">
+    <input type="text" placeholder="full name:" required>
+    <input type="email" placeholder="Your email:" required>
+    <textarea rows="4" placeholder="Your message..."></textarea>
+    <button class="btn">Send Message</button>
+  </form>
+  <a href="index1.html">@</a>
+</section>
+
+<footer>
+  <p></p>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('navLinks');
+  btn.addEventListener('click',()=>nav.classList.toggle('show'));
+
+  function scrollToSection(id){
+    document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+  }
+</script>
+
+</body>
+</html>

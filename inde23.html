@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Object Practice</title>
+</head>
+<body style="background-color: aqua;">
+  <h1>JavaScript Object Example</h1>
+  <p>Open your browser console to see the output (press F12 → Console).</p>
+
+  <script src="index23.js">
+    const person = {
+      name: "Alice",
+      age: 25,
+      city: "New York",
+      hobbies: ["reading", "painting", "traveling"],
+      address: {
+        street: "123 Main St",
+        zip: "10001"
+      },
+      greet: function() {
+        console.log(`Hello, my name is ${this.name}!`);
+      }
+    };
+
+    console.log("Person object:", person);
+
+    console.log("Name:", person.name);
+    console.log("Age:", person.age);
+    console.log("City:", person.city);
+
+    console.log("First hobby:", person.hobbies[0]);
+    console.log("Street address:", person.address.street);
+
+    person.greet();
+
+    person.age = 26;
+    person.country = "USA"; 
+    console.log("Updated person object:", person);
+
+    console.log("Listing all keys and values:");
+    for (const key in person) {
+      if (person.hasOwnProperty(key)) {
+        console.log(key + ":", person[key]);
+      }
+    }
+
+    const jsonString = JSON.stringify(person, null, 2);
+    console.log("JSON string version:\n", jsonString);
+
+    
+  </script>
+</body>
+</html>
